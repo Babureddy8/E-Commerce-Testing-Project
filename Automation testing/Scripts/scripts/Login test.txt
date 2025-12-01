@@ -1,0 +1,22 @@
+Login test
+
+from selenium import webdriver
+
+
+# Example script to test login functionality
+driver = webdriver.Chrome()
+driver.get("https://example-ecommerce.com/login")
+
+
+username = driver.find_element("id", "username")
+password = driver.find_element("id", "password")
+login_button = driver.find_element("id", "loginBtn")
+
+
+username.send_keys("testuser")
+password.send_keys("testpassword")
+login_button.click()
+
+
+print("Login test executed successfully")
+driver.quit()

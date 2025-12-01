@@ -1,0 +1,16 @@
+ADD to cart
+
+from selenium import webdriver
+
+
+# Example script to test Add to Cart functionality
+driver = webdriver.Chrome()
+driver.get("https://example-ecommerce.com/product/123")
+
+
+add_to_cart_btn = driver.find_element("id", "addToCart")
+add_to_cart_btn.click()
+
+
+print("Add to Cart test executed successfully")
+driver.quit()
